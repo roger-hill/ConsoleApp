@@ -22,6 +22,10 @@ public class ConsoleApp {
         }
     }
 
+    /**
+     * A meaningless change to play with git
+     * @throws IOException
+     */
     private void playWithFolderFlags() throws IOException {
 
         File file = new File("C:\\temp\\testFolder_" + System.currentTimeMillis());
