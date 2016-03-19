@@ -19,12 +19,11 @@ public class ConsoleApp {
             app.playWithFileFlags();
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 
     /**
-     * A meaningless change to play with git
-     * Another meaningless change for v1.0.3
      * @throws IOException
      */
     private void playWithFolderFlags() throws IOException {
