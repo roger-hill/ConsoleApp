@@ -19,7 +19,7 @@ public class HttpUtility {
 
     public static HttpResponse sendRequest(HttpRequest request) throws IOException {
 
-        HttpURLConnection connection = openConnection(request.getUrl());
+        HttpURLConnection connection = openConnection(request);
 
         connection.setRequestMethod(request.getVerb());
 
@@ -43,9 +43,10 @@ public class HttpUtility {
 
     }
 
-    private static HttpURLConnection openConnection(String address) throws IOException {
+    private static HttpURLConnection openConnection(HttpRequest request)
+            throws IOException {
 
-        URL url = new URL(address);
+        URL url = new URL(request.getUrl());
         return (HttpURLConnection) url.openConnection();
     }
 

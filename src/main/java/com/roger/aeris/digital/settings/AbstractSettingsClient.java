@@ -1,6 +1,6 @@
 package com.roger.aeris.digital.settings;
 
-import com.roger.aeris.digital.DigitalHttpUtility;
+import com.roger.aeris.digital.DigitalUIHttpUtility;
 import com.roger.aeris.digital.settings.business.ManufacturerBrandClient;
 import com.roger.aeris.digital.settings.business.MembershipProgramClient;
 import com.roger.aeris.digital.settings.business.PaymentModeClient;
@@ -112,7 +112,7 @@ public abstract class AbstractSettingsClient {
 
         try {
             System.out.println("Response: " +
-                    DigitalHttpUtility.handleRequest(
+                    DigitalUIHttpUtility.handleRequest(
                             getReadAllRequest()
                     ));
         } catch (IOException e) {
@@ -124,7 +124,7 @@ public abstract class AbstractSettingsClient {
 
         try {
             System.out.println("Response: " +
-                    DigitalHttpUtility.handleRequest(
+                    DigitalUIHttpUtility.handleRequest(
                             getSaveRequest()
                     ));
         } catch (IOException e) {

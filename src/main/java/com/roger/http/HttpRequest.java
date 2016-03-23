@@ -19,6 +19,7 @@ public class HttpRequest {
     private String url;
     private String payload;
     private Map<String, String> properties;
+    boolean acceptAnyCertificate = false;
 
     public static HttpRequest getJSONHttpRequest(String verb, String url, String payload) {
 
@@ -59,5 +60,13 @@ public class HttpRequest {
         }
 
         return properties;
+    }
+
+    public boolean getAcceptAnyCertificate() {
+        return acceptAnyCertificate;
+    }
+
+    public void setAcceptAnyCertificate(boolean acceptAnyCertificate) {
+        this.acceptAnyCertificate = acceptAnyCertificate;
     }
 }

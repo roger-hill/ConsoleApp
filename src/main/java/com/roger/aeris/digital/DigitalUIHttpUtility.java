@@ -12,7 +12,7 @@ import java.io.IOException;
  * Created by Roger Hill
  * Date 02/03/2016.
  */
-public class DigitalHttpUtility {
+public class DigitalUIHttpUtility {
 
     private static String XSessionToken = null;
     private static final String X_SESSION_TOKEN_NAME = "X-SessionToken";
@@ -41,7 +41,7 @@ public class DigitalHttpUtility {
         HttpResponse response = null;
         try {
             response = HttpUtility.sendRequest(
-                    HttpRequest.getJSONHttpRequest(com.roger.http.HttpRequest.VERB_POST,
+                    HttpRequest.getJSONHttpRequest(HttpRequest.VERB_POST,
                             "http://localhost:18080/easi-api/api/session",
                             getLoginJSON())
             );
